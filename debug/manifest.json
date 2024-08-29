@@ -1,0 +1,63 @@
+{
+  "applicationName": "M1rrage with QEMU",
+  "version": "1.0.0",
+  "debug": {
+    "enabled": false,
+    "logLevel": "info",  // Options: "debug", "info", "warn", "error"
+    "outputFile": "debug.log",
+    "trace": {
+      "enabled": false,
+      "traceFile": "trace.log",
+      "tracePoints": [
+        "cpu",
+        "memory",
+        "io"
+      ]
+    }
+  },
+  "qemu": {
+    "features": {
+      "cpu": "host",  // Use the host's CPU for emulation
+      "smp": 2,       // Number of CPU cores
+      "memory": "2G", // Allocate 2 GB of RAM
+      "hda": "my-disk.img",  // Hard drive image
+      "net": {
+        "enabled": true,
+        "type": "user",  // User-mode networking
+        "hostfwd": "tcp::2222-:22"  // Forward host port 2222 to guest port 22
+      },
+      "usb": {
+        "enabled": true,
+        "devices": [
+          "keyboard",
+          "mouse"
+        ]
+      },
+      "display": "vnc",  // Use VNC for display
+      "audio": {
+        "enabled": true,
+        "type": "alsa",  // Use ALSA for sound
+        "output": "default"
+      }
+    }
+  },
+  "logging": {
+    "enabled": true,
+    "logFile": "application.log",
+    "logFormat": "json",  // Options: "text", "json"
+    "logRotation": {
+      "enabled": true,
+      "maxSize": "10M",  // Maximum log file size
+      "maxFiles": 5      // Maximum number of rotated files
+    }
+  },
+  "performance": {
+    "cpuUsageLimit": 80,  // Limit CPU usage to 80%
+    "memoryUsageLimit": "1.5G"  // Limit memory usage to 1.5 GB
+  },
+  "security": {
+    "sandbox": true,  // Enable sandboxing
+    "restrictNetwork": false,  // Restrict network access (false to allow)
+    "restrictFilesystem": true  // Restrict filesystem access
+  }
+}
