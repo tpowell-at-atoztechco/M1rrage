@@ -1,6 +1,11 @@
 BSD 3-Clause License
 
-Copyright (c) 2024, Tim Powell
+Copyright (c) 2024, <a href="https://timjpowell.com/copyright">Tim Powell</a>
+Copyright (c) 2024, <a href="">A to Z Technology, Inc</a>
+Copyright (C) 2024, <a href="">Ammonitrix, Inc</a>
+
+All Rights Reserved except those expressly released by this software license, 
+and as required by GPL per <a href="https://github.com/qemu/qemu?tab=GPL-2.0-2-ov-file">QEMU's GPL-2.0 software license</a>.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
