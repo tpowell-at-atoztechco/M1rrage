@@ -23,4 +23,17 @@ chmod +x verify.sh
 ```
 5. Use QEMU to launch your VM
 
+# Filestructure Explanation of M1rrage/QEMU:
+```m1rrage-master/QEMU/
+- README.md: An overview of the project, including goals, features, and usage instructions.
+- LICENSE.md: The licensing information for the project.
+- manifest.json: Configuration file detailing debugging settings and any specific QEMU features being utilized.
+- docs/: Documentation related to the emulation, including architecture-specific details and setup guides.
+- src/: Contains all source code, split into directories based on the CPU architecture (ARM64 and x64). Each architecture has its own directory for CPU, memory, and I/O handling.
+- configs/: Contains QEMU configuration files for each architecture.
+- scripts/: Useful scripts for building, running, and managing the emulation environment.
+- tests/: Test cases for both ARM64 and x64 components, ensuring that the emulation behaves as expected.
+- Makefile: Provides build automation, making it easy to compile and clean the project.
+```
+
 ## This guide to be updated soon!
